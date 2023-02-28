@@ -1,0 +1,115 @@
+/* COLORS */
+/* TYPE */
+.courses {
+  background-image: linear-gradient(white, #f0f1ff);
+  padding-bottom: 80px;
+}
+
+.courses .container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.courses .courses__header {
+  padding: 24px 28px 32px 28px;
+  border-radius: 10px;
+  cursor: auto;
+  pointer-events: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+}
+
+.course {
+  position: relative;
+  background-color: white;
+  padding: 56px 28px 32px 28px;
+  border-radius: 10px;
+}
+
+.course .course__icon {
+  position: absolute;
+  top: -28px;
+  left: 28px;
+}
+
+.course .course__data {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.course .course__data .course__title {
+  font-size: 1.25rem;
+  line-height: 1.575rem;
+}
+
+.course .course__data .course__description {
+  color: #83869a;
+}
+
+.course .course__link {
+  text-decoration: none;
+  color: #f74780;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.course .course__link:hover {
+  color: #ffa7c3;
+}
+
+@media (min-width: 768px) {
+  .courses {
+    padding-bottom: 50px;
+  }
+  .courses .container {
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .courses .container .flex-item {
+    flex-grow: 1;
+    flex-basis: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    padding: 56px 32px 32px 32px;
+  }
+  .courses .container .course__link {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .courses {
+    padding-bottom: 90px;
+  }
+  .courses .courses__header {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .courses .container {
+    gap: 30px;
+  }
+  .courses .container .flex-item {
+    flex-grow: 1;
+    flex-basis: 30%;
+    margin-bottom: 50px;
+    padding: 64px 32px 40px 32px;
+  }
+  .courses .container .course__data {
+    gap: 24px;
+  }
+  .courses .container .course__title {
+    font-size: 1.5rem;
+    line-height: 1.9rem;
+  }
+  .courses .container .course__description, .courses .container .course__link {
+    line-height: 1.75rem;
+  }
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3MvdmFyaWFibGVzLnNjc3MiLCIuLi9zYXNzL2NvdXJzZXMuc2NzcyIsImNvdXJzZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBLFdBQUE7QUFlQSxTQUFBO0FDZEE7RUFDRSxpREFBeUU7RUFDekUsb0JBQW9CO0FDQ3RCOztBREhBO0VBS0ksYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixTQUFTO0FDRWI7O0FEVEE7RUFXSSw0QkFBNEI7RUFDNUIsbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixvQkFBb0I7RUFDcEIsaUJEVW1CO0VDVG5CLGdCREdVO0VDRlYsaUJEY2lCO0FFWnJCOztBREVBO0VBQ0Usa0JBQWtCO0VBQ2xCLHVCRHZCNEI7RUN3QjVCLDRCQUE0QjtFQUM1QixtQkFBbUI7QUNDckI7O0FETEE7RUFPSSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLFVBQVU7QUNFZDs7QURYQTtFQWFJLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsU0FBUztFQUNULG1CQUFtQjtBQ0V2Qjs7QURsQkE7RUFtQk0sa0JEaEJrQjtFQ2lCbEIscUJEWG1CO0FFY3pCOztBRHZCQTtFQXdCTSxjRDNDMkI7QUU4Q2pDOztBRDNCQTtFQTZCSSxxQkFBcUI7RUFDckIsY0Q1QzRCO0VDNkM1QixnQkRsQ1M7RUNtQ1QsbUJEL0JrQjtBRWlDdEI7O0FEbENBO0VBbUNNLGNEbEQyQjtBRXFEakM7O0FERUE7RUFDRTtJQUNFLG9CQUFvQjtFQ0N0QjtFREZBO0lBSUksU0FBUztJQUNULG1CQUFtQjtJQUNuQixlQUFlO0VDQ25CO0VEUEE7SUFTTSxZQUFZO0lBQ1osZUFBZTtJQUNmLGFBQWE7SUFDYixzQkFBc0I7SUFDdEIsOEJBQThCO0lBQzlCLG1CQUFtQjtJQUNuQiw0QkFBNEI7RUNDbEM7RURoQkE7SUFtQk0sc0JBQXNCO0VDQTVCO0FBQ0Y7O0FES0E7RUFDRTtJQUNFLG9CQUFvQjtFQ0Z0QjtFRENBO0lBSUksZUFBZTtJQUNmLG1CQUFtQjtFQ0Z2QjtFREhBO0lBU0ksU0FBUztFQ0hiO0VETkE7SUFZTSxZQUFZO0lBQ1osZUFBZTtJQUNmLG1CQUFtQjtJQUNuQiw0QkFBNEI7RUNIbEM7RURaQTtJQW1CTSxTQUFTO0VDSmY7RURmQTtJQXNCTSxpQkRyRmU7SUNzRmYsbUJBQW1CO0VDSnpCO0VEbkJBO0lBMEJNLG9CQUFvQjtFQ0oxQjtBQUNGIiwiZmlsZSI6ImNvdXJzZXMuY3NzIn0= */

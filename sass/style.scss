@@ -1,0 +1,35 @@
+@import './variables.scss';
+@import './reset.scss';
+@import './general.scss';
+
+@import './hero.scss';
+@import './courses.scss';
+
+.header {
+  margin: 16px 0 38px 0;
+}
+.footer {
+  padding: 36px 0;
+  background-color: $clr-gray-900;
+}
+.bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer {
+    padding: 32px 0;
+  }
+}

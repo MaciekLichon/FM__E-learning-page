@@ -1,0 +1,121 @@
+@import './variables.scss';
+
+.courses {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(240, 241, 255));
+  padding-bottom: 80px; 
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .courses__header {
+    padding: 24px 28px 32px 28px;
+    border-radius: 10px;
+    cursor: auto;
+    pointer-events: none;
+    font-size: $fs-heading-200;
+    font-weight: $fw-heavy;
+    line-height: $lh-heading-200;
+  }
+}
+
+.course {
+  position: relative;
+  background-color: $clr-white;
+  padding: 56px 28px 32px 28px;
+  border-radius: 10px;
+
+  .course__icon {
+    position: absolute;
+    top: -28px;
+    left: 28px;
+  }
+
+  .course__data {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    .course__title {
+      font-size: $fs-heading-100;
+      line-height: $lh-heading-100;
+    }
+
+    .course__description {
+      color: $clr-gray-100;
+    }
+
+  }
+  .course__link {
+    text-decoration: none;
+    color: $clr-pink-500;
+    font-weight: $fw-bold;
+    font-size: $fs-body-200;
+
+    &:hover {
+      color: $clr-pink-100;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .courses {
+    padding-bottom: 50px;
+
+    .container {
+      gap: 10px;
+      flex-direction: row;
+      flex-wrap: wrap;
+  
+      .flex-item {
+        flex-grow: 1;
+        flex-basis: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        padding: 56px 32px 32px 32px;
+      }
+
+      .course__link {
+        align-self: flex-start;
+      }
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .courses {
+    padding-bottom: 90px;
+
+    .courses__header {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    .container {
+      gap: 30px;
+  
+      .flex-item {
+        flex-grow: 1;
+        flex-basis: 30%;
+        margin-bottom: 50px;
+        padding: 64px 32px 40px 32px;
+      }
+
+      .course__data {
+        gap: 24px;
+      }
+      .course__title {
+        font-size: $fs-heading-200;
+        line-height: 1.9rem;
+      }
+      .course__description, .course__link {
+        line-height: 1.75rem;
+      }
+    }
+  }
+}

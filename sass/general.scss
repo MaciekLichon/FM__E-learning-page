@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+body {
+  font-family: $ff-regular;
+  font-size: $fs-body-100;
+  font-weight: $fw-regular;
+  line-height: $lh-body;
+  color: $clr-gray-900;
+}
+
+.container {
+  max-width: calc(1110px + 2*40px);
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.button {
+  padding: 10px 24px;
+  font-weight: $fw-bold;
+  border-radius: 30px;
+  border: none;
+  background: none;
+  color: $clr-white;
+  cursor: pointer;
+
+  &.dark {
+    background-color: $clr-gray-900;
+    &:hover {
+      background-color: $clr-gray-500;
+    }
+  }
+
+  &.orange {
+    background: linear-gradient($grad-clr-orange, $grad-clr-pink); 
+    &:hover {
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
+        linear-gradient($grad-clr-orange, $grad-clr-pink); 
+    }
+  }
+
+  &.magenta {
+    background-image: linear-gradient($grad-clr-blue, $grad-clr-pink);
+    &:hover {
+      background-image: 
+        linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)),
+        linear-gradient($grad-clr-blue, $grad-clr-pink);
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: $fs-body-200;
+  }
+  .button {
+    padding: 14px 32px;
+    
+    &.orange {
+      padding: 19px 32px;
+      border-radius: 35px;
+    }
+  }
+}
